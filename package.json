@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "tailwindcss-animate": "^1.0.7"
+  }
 }
