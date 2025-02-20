@@ -637,6 +637,22 @@ video {
   animation: slideLeft 0.5s ease-in-out forwards;
 }
 
+@keyframes slideRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 0.5s ease-in-out forwards;
+}
+
 @keyframes slideUp {
   0% {
     transform: translateY(50px);
@@ -651,17 +667,6 @@ video {
 
 .animate-slide-up {
   animation: slideUp 0.5s ease-in-out forwards;
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping {
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 @keyframes zoomIn {
@@ -680,28 +685,16 @@ video {
   animation: zoomIn 0.5s ease-in-out forwards;
 }
 
-@keyframes slideRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-right {
-  animation: slideRight 0.5s ease-in-out forwards;
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -857,18 +850,24 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.delay-500 {
-  transition-delay: 500ms;
+.delay-300 {
+  transition-delay: 300ms;
 }
 
 .delay-700 {
   transition-delay: 700ms;
 }
 
-.delay-300 {
-  transition-delay: 300ms;
+.delay-\[500ms\] {
+  transition-delay: 500ms;
 }
 
-.delay-150 {
-  transition-delay: 150ms;
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
 }
